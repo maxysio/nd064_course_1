@@ -23,7 +23,8 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Change Path
-        run: cd project
+        run: |
+          cd project
       -
         name: Build and push
         uses: docker/build-push-action@v3
