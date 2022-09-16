@@ -22,10 +22,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
+        name: Change Path
+        run: cd project
+      -
         name: Build and push
         uses: docker/build-push-action@v3
         with:
-          context: project
+          context: .
           file: ./Dockerfile
           platforms: linux/amd64
           push: true
