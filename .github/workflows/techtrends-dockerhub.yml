@@ -29,7 +29,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./project
-          file: ./Dockerfile
+          file: ./project/Dockerfile
           platforms: linux/amd64
           push: true
           tags: mayukhc/techtrends:latest
